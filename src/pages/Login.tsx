@@ -5,13 +5,10 @@ import '../styles/pages/login.css';
 import {useAuth} from '../contexts/auths';
 
 import MainCard from '../components/MainCard';
-import { useHistory } from 'react-router-dom';
-
 
 const Login: React.FC = () => {
   const { signed, signIn }= useAuth();
-  const history = useHistory();
-
+  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password_hash, setPasswordHash] = useState('');
@@ -35,7 +32,7 @@ const Login: React.FC = () => {
     await api.post('users',  {name, email, password_hash});
 
     alert('Cadastro realizado com sucesso. Faça o login.')
-    // history.push('/map');
+    //history.push('/map');
   };
 
   
