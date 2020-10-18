@@ -73,7 +73,7 @@ function OrphanagesMap() {
 
     
   useEffect(() => {
-    socket.current = io.connect("http://localhost:8000");
+    socket.current = io.connect("https://happy-webrtc-server.herokuapp.com:8000");
 
     socket.current.on("yourID", (id: string) => {
       console.log(`O id e ${id}`);
