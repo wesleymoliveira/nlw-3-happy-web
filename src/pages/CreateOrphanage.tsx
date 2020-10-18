@@ -65,13 +65,13 @@ export default function CreateOrphanage() {
 
     images.forEach((image) =>{
       data.append('images', image);
-    })
+    });
+
+    console.log(data);
 
     await api.post('orphanages', data);
 
-    alert('Cadastro realizado com sucesso');
-
-    history.push('/map');
+    history.push('/ok');
   };
 
   return (
